@@ -1,0 +1,29 @@
+{
+  "name": "electron-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "debug": "electron --inspect=5858 main.js",
+    "pack": "electron-builder",
+    "dist": "electron-builder --win --x64",
+    "package": "electron-packager ./ myapp --out ./OutApp "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^9.1.1",
+    "electron-packager": "^15.0.0"
+  },
+  "build": {
+    "appId": "123456",
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    }
+  }
+}
